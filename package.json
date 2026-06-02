@@ -1,0 +1,44 @@
+{
+  "name": "vscode-proxy-relay",
+  "displayName": "VS Code Proxy Relay",
+  "description": "Run HTTP proxy inside VS Code to share its network access",
+  "version": "1.0.0",
+  "publisher": "local",
+  "license": "MIT",
+  "engines": {
+    "vscode": "^1.80.0"
+  },
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "main": "./extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "proxyRelay.start",
+        "title": "Proxy Relay: Start"
+      },
+      {
+        "command": "proxyRelay.stop",
+        "title": "Proxy Relay: Stop"
+      },
+      {
+        "command": "proxyRelay.showStatus",
+        "title": "Proxy Relay: Show Status"
+      }
+    ],
+    "configuration": {
+      "title": "Proxy Relay",
+      "properties": {
+        "proxyRelay.port": {
+          "type": "number",
+          "default": 8899,
+          "description": "Port to listen on"
+        }
+      }
+    }
+  },
+  "dependencies": {
+    "http-proxy": "^1.18.1"
+  }
+}
