@@ -5,6 +5,10 @@
   "version": "1.0.0",
   "publisher": "local",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/user/vscode-proxy-relay"
+  },
   "engines": {
     "vscode": "^1.80.0"
   },
@@ -12,6 +16,10 @@
     "onStartupFinished"
   ],
   "main": "./extension.js",
+  "scripts": {
+    "pack": "npx vsce package --out dist/",
+    "publish": "vsce publish"
+  },
   "contributes": {
     "commands": [
       {

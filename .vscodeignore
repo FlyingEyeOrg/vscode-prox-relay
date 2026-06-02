@@ -3,3 +3,6 @@
 .gitignore
 node_modules
 **/*.vsix
+pack.bat
+pack.sh
+dist/
